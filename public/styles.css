@@ -1,0 +1,157 @@
+/* 전반적인 스타일링 */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8ff; /* 파란색 계열의 배경색 */
+  }
+  
+  .container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* 헤더 스타일 */
+  header {
+    background-color: #4682b4; /* 메인 색상 */
+    color: white;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  header h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-right: 10px;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+  }
+  
+  nav ul li a:hover {
+    background-color: #357abd; /* 메뉴 호버 색상 */
+    border-radius: 5px;
+  }
+  
+  /* 메인 섹션 스타일 */
+  .hero {
+    background-image: url('./hero-background.jpg'); /* 히어로 이미지 설정 */
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+  }
+  
+  .hero h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  .hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+  
+  .btn {
+    display: inline-block;
+    background-color: #357abd; /* 버튼 색상 */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  .btn:hover {
+    background-color: #245e8a; /* 버튼 호버 색상 */
+  }
+  
+  /* 푸터 스타일 */
+  footer {
+    background-color: #4682b4; /* 푸터 색상 */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  /* 반응형 디자인 */
+  @media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+    header h1 {
+        font-size: 20px;
+    }
+    .hero h2 {
+        font-size: 28px;
+    }
+    .hero p {
+        font-size: 18px;
+    }
+    .btn {
+        padding: 8px 16px;
+    }
+  }
+  
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  .product-card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .product-card img {
+    max-width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .product-card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .product-card p {
+    font-size: 14px;
+    color: #666666;
+    margin-bottom: 15px;
+  }
+  
+  .product-card .btn {
+    display: inline-block;
+    background-color: #357abd;
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  .product-card .btn:hover {
+    background-color: #245e8a;
+  }
+  

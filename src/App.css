@@ -1,0 +1,107 @@
+
+ /* CSS 코드 */
+ .search-container {
+  position: relative;
+  margin: 0 auto;
+  max-width: 400px; /* 검색창의 최대 너비 */
+}
+
+.search-input {
+  width: 100%;
+  padding: 12px 20px; /* 내부 여백 */
+  font-size: 16px;
+  border: 2px solid #4682b4; /* 테두리 색상 */
+  border-radius: 25px; /* 둥근 테두리 모양 */
+  outline: none; /* 포커스시 테두리 삭제 */
+  box-sizing: border-box; /* 패딩을 포함한 전체 너비 설정 */
+}
+
+.search-input:focus {
+  border-color: #002147; /* 포커스시 테두리 색상 변경 */
+}
+
+.search-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 12px 20px;
+  background-color: #4682b4; /* 배경색 */
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-top-right-radius: 25px; /* 버튼의 오른쪽 둥근 테두리 */
+  border-bottom-right-radius: 25px; /* 버튼의 오른쪽 둥근 테두리 */
+}
+
+/* 반응형 디자인을 위한 미디어 쿼리 예시 */
+@media screen and (max-width: 600px) {
+  .search-container {
+      width: 90%; /* 작은 화면에서 검색창 너비 조정 */
+  }
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.product-card {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.product-card img {
+  max-width: 100%;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.product-card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.product-card p {
+  font-size: 14px;
+  color: #666666;
+  margin-bottom: 15px;
+}
+
+.product-card .btn {
+  display: inline-block;
+  background-color: #357abd;
+  color: white;
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.product-card .btn:hover {
+  background-color: #245e8a;
+}
+
+.back-button {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 10px;
+  font-size: 20px;
+  background-color: transparent;
+  color: #007bff;
+  border: none;
+  cursor: pointer;
+  z-index: 1000; /* 다른 요소 위에 배치 */
+}
+
+.back-button:hover {
+  color: #0056b3;
+}
+
+.back-button i {
+  font-size: 24px; /* 아이콘 크기 조정 */
+}
