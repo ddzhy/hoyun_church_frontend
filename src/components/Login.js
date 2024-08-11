@@ -20,7 +20,7 @@ function Login() {
         setErrors(Validation(values));
 
         if (!errors.email && !errors.password) {
-            axios.post(`${process.env.REACT_APP_API_URL}/login`, values)
+            axios.post(`https://hoyun-church-backend.vercel.app/login`, values)
                 .then(res => {
                     if (res.data === "Success") {
                         navigate('/');
