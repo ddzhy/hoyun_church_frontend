@@ -5,6 +5,7 @@ import Main from "./components/main";
 import Filedownload from "./components/filedownload.js"
 import Login from "./components/Login.js"
 import Signup from "./components/Signup.js"
+import Mypage from "./components/mypage.js";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Route path="/file-download" element={<Filedownload />} />
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<Signup />} />
+      <Route path="/MyPage" element={<Mypage />} />
     </Routes>
   );
 }
