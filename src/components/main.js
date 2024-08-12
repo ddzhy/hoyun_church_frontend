@@ -6,8 +6,13 @@ import picture_1 from "./images/picture_1.jpg"
 import picture_2 from "./images/picture_2.jpg"
 import picture_3 from "./images/picture_3.jpg"
 import { Link } from 'react-router-dom';
+import { useAuth } from '../components/AuthContext';
+
 
 function Main () {
+
+  const { isLoggedIn } = useAuth();
+
   return (
     <div>
         <header>
@@ -20,7 +25,11 @@ function Main () {
                 <li><Link to="/deals">특가</Link></li>
                 <li><Link to="/support">고객센터</Link></li>
                 <li><Link to="/Picturesearching">모든 사진 검색</Link></li>
-                <li><Link to="/login">로그인</Link></li>
+                {isLoggedIn ? (
+                    <li><Link to="/MyPage">마이페이지</Link></li>
+                ) : (
+                    <li><Link to="/login">로그인</Link></li>
+                )}
             </ul>
             </nav>
         </div>
