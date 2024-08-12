@@ -25,11 +25,8 @@ function Main () {
                 <li><Link to="/deals">특가</Link></li>
                 <li><Link to="/support">고객센터</Link></li>
                 <li><Link to="/Picturesearching">모든 사진 검색</Link></li>
-                {isLoggedIn ? (
-                    <li><Link to="/MyPage">마이페이지</Link></li>
-                ) : (
-                    <li><Link to="/login">로그인</Link></li>
-                )}
+                {isLoggedIn ? <Link to="/mypage">마이페이지</Link> : <Link to="/login">로그인</Link>}
+
             </ul>
             </nav>
         </div>
