@@ -25,7 +25,7 @@ function Login() {
         setErrors(Validation(values));
 
         if (!errors.email && !errors.password) {
-            axios.post(`${apiUrl}/login`, values)
+            axios.post(`https://hoyun-church-backend.vercel.app/login`, values)
                 .then(res => {
                     if (res.data === "Success") {
                         login();  // 로그인 상태 업데이트

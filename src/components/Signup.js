@@ -23,7 +23,7 @@ function Signup() {
         setErrors(Validation(values));
 
         if (!errors.name && !errors.email && !errors.password) {
-            axios.post(`${apiUrl}/signup`, values)
+            axios.post(`https://hoyun-church-backend.vercel.app/signup`, values)
                 .then(res => {
                     navigate('/login');
                 })
