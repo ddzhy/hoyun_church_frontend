@@ -18,12 +18,14 @@ function Login() {
         setValues(prev => ({ ...prev, [event.target.name]: event.target.value }));
     };
 
+    const apiUrl = process.env.REACT_APP_API_URL
+
     const handleSubmit = (event) => {
         event.preventDefault();
         setErrors(Validation(values));
 
         if (!errors.email && !errors.password) {
-            axios.post(`https://hoyun-church-backend.vercel.app/login`, values)
+            axios.post(`${apiUrl}/login`, values)
                 .then(res => {
                     if (res.data === "Success") {
                         login();  // 로그인 상태 업데이트

@@ -15,13 +15,15 @@ function Signup() {
     const handleInput = (event) => {
         setValues(prev => ({ ...prev, [event.target.name]: event.target.value }));
     };
+    
+    const apiUrl = process.env.REACT_APP_API_URL
 
     const handleSubmit = (event) => {
         event.preventDefault();
         setErrors(Validation(values));
 
         if (!errors.name && !errors.email && !errors.password) {
-            axios.post(`https://hoyun-church-backend.vercel.app/signup`, values)
+            axios.post(`${apiUrl}/signup`, values)
                 .then(res => {
                     navigate('/login');
                 })
