@@ -1,6 +1,13 @@
 /* 전반적인 스타일링 */
+
+@font-face {
+  font-family: 'ChosunGs';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunGs.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 body {
-    font-family: Arial, sans-serif;
+    /* font-family: Arial, sans-serif; */
     line-height: 1.6;
     margin: 0;
     padding: 0;
@@ -11,6 +18,7 @@ body {
     width: 80%;
     margin: 0 auto;
     padding: 0 20px;
+    font-family: 'ChosunGs';
   }
   
   /* 헤더 스타일 */
@@ -154,4 +162,7 @@ body {
   .product-card .btn:hover {
     background-color: #245e8a;
   }
-  
+
+  div {
+    font-family: 'ChosunGs';
+  }

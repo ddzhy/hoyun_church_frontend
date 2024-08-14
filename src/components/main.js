@@ -1,87 +1,71 @@
 /* eslint-disable */
 
-
-import React from 'react'
-import picture_1 from "./images/picture_1.jpg"
-import picture_2 from "./images/picture_2.jpg"
-import picture_3 from "./images/picture_3.jpg"
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { useAuth } from '../components/AuthContext';
+import { data } from "./picture_Searching_data";
 
-
-function Main () {
-
+function Main() {
   const { isLoggedIn } = useAuth();
 
   return (
     <div>
-        <header>
+      <header>
         <div className="container">
-            <h1>쌈뽕이 사이트</h1>
-            <nav>
+          <h1>호윤교</h1>
+          <nav>
             <ul>
-                <li><Link to="/">홈</Link></li>
-                <li><Link to="/products">제품</Link></li>
-                <li><Link to="/deals">특가</Link></li>
-                <li><Link to="/support">고객센터</Link></li>
-                <li><Link to="/Picturesearching">모든 사진 검색</Link></li>
-                {isLoggedIn ? <Link to="/mypage">마이페이지</Link> : <Link to="/login">로그인</Link>}
-
+              <li><Link to="/">홈</Link></li>
+              <li><Link to="/products">소개</Link></li>
+              <li><Link to="/deals">연혁</Link></li>
+              <li><Link to="/support">고객센터</Link></li>
+              <li><Link to="/Picturesearching">모든 사진 검색</Link></li>
+              {isLoggedIn ? <Link to="/mypage">마이페이지</Link> : <Link to="/login">로그인</Link>}
             </ul>
-            </nav>
+          </nav>
         </div>
-        </header>
+      </header>
 
-        <main>
-            <section class="hero" >
-                <div class="container">
-                    <h2>새로운 사진 무료 다운!</h2>
-                    <p>매일 새로운 사진을 만나보세요.</p>
-                    <a href="#" class="btn">세부 정보 보기</a>
-                </div>
-            </section>
-
-            <section class="products">
-            <div class="container">
-                <h2>주요 상품 카테고리</h2>
-                <div class="product-grid">
-                    <div class="product-card">
-                        <img src={picture_1} alt="Product 1" i/>
-                        <h3>상품 제목 1</h3>
-                        <p>상품 설명이 들어갑니다.</p>
-                        <a href="#" class="btn">구매하기</a>
-                    </div>
-                    <div class="product-card">
-                        <img src={picture_2} alt="Product 2"/>
-                        <h3>상품 제목 2</h3>
-                        <p>상품 설명이 들어갑니다.</p>
-                        <a href="#" class="btn">구매하기</a>
-                    </div>
-                    <div class="product-card">
-                        <img src={picture_3} alt="Product 3"/>
-                        <h3>상품 제목 3</h3>
-                        <p>상품 설명이 들어갑니다.</p>
-                        <a href="#" class="btn">구매하기</a>
-                    </div>
-                </div>
-            </div>
+      <main>
+        <section className="hero">
+          <div className="container">
+            <h2>21세기를 구원하실 호윤님</h2>
+            <p>매일 호윤님에게 감사하며 살아가봅시다</p>
+            <a href="#" className="btn">세부 정보 보기</a>
+          </div>
         </section>
-        
-        </main>
-        
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
+
+        <section className="products">
+          <div className="container">
+            <h2>주요 사진들</h2>
+            <div className="product-grid">
+              {data.map((item) => (
+                <div className="product-card" key={item.id}>
+                  <img src={item.imgSrc} alt={item.imgAlt} />
+                  <h3>{item.title}</h3>
+                  <p>{item.description}</p>
+                  <a href={item.href} className="btn">{item.buttonText}</a>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+      </main>
+
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
 
     </div>
-  )
+  );
 }
 
 export default Main;
