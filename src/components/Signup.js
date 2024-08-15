@@ -24,7 +24,7 @@ function Signup() {
         setErrors(Validation(values));
 
         if (!errors.name && !errors.email && !errors.password) {
-            axios.post(`${apiUrl}/signup`, values)  // API URL을 환경 변수로 대체
+            axios.post(`https://hoyun-church-backend.vercel.app/signup`, values)  // API URL을 환경 변수로 대체
                 .then(res => {
                     navigate('/login');
                 })

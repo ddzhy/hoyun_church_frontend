@@ -26,7 +26,7 @@ function Login() {
         setErrors(Validation(values));
 
         if (!errors.email && !errors.password) {
-            axios.post(`${apiUrl}/login`, values)  // API URL을 환경 변수로 대체
+            axios.post(`https://hoyun-church-backend.vercel.app/login`, values)  // API URL을 환경 변수로 대체
                 .then(res => {
                     if (res.data === "Success") {
                         login();  // 로그인 상태 업데이트
@@ -55,7 +55,7 @@ function Login() {
                         {errors.password && <span className='text-danger'>{errors.password}</span>}
                     </div>
                     <button type='submit'>Login</button>
-                    <p>You agree to our terms and policies</p>
+                    <p>You agree to our terms and policies</p> 
                     <Link to="/signup">Create Account</Link>
                 </form>
             </div>
