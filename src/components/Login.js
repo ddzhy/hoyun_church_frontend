@@ -28,7 +28,7 @@ function Login() {
         setErrors(validationErrors);
 
         if (!validationErrors.email && !validationErrors.password) {
-            axios.post(`${process.env.REACT_APP_API_URL}/login`, values)
+            axios.post(`https://hoyun-church-backend.vercel.app/login`, values)
                 .then(res => {
                     if (res.data === "Success") {
                         login(); 

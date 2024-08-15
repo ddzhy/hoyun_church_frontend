@@ -39,7 +39,7 @@ function Signup() {
                 setCurrentErrorIndex(prevIndex => prevIndex + 1);
             }
         } else {
-            axios.post(`http://localhost:8081/signup`, values)
+            axios.post(`https://hoyun-church-backend.vercel.app/signup`, values)
                 .then(res => {
                     navigate('/login');
                 })
