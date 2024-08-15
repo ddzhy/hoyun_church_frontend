@@ -4,19 +4,19 @@ function Validation(values) {
     const password_pattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[a-zA-Z0-9]{8,}$/
 
     if(values.email === "") {
-        error.email = "Name should not be empty"
+        alert("이메일은 1자리 이상 입력해야 합니다")
     }
     else if(!email_pattern.test(values.email)) {
-        error.email = "Email Didn't match"
+        alert("이메일이 틀립니다")
     }else {
         error.email = ""
     }
 
     if(values.password === "") {
-        error.password = "Password should not be empty"
+        alert("비밀번호는 1자리 이상 입력해야 합니다")
     }
     else if(!password_pattern.test(values.password)) {
-        error.password = "Password didn't match"
+        alert("비밀번호가 틀립니다")
     } else {
         error.password = ""
     }

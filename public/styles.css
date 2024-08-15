@@ -2,12 +2,10 @@
   font-family: 'ChosunGs';
   src: url('./font/kppuskum.woff') format('woff');
   /* font-weight: normal;
-  font*/
+  font-style: normal; */
 }
-
-
 body {
-    /* font-family: Arial, sans-serif; */
+    font-family: 'ChosunGs';
     line-height: 1.6;
     margin: 0;
     padding: 0;
@@ -166,3 +164,269 @@ body {
   div {
     font-family: 'ChosunGs';
   }
+/* 기본 컨테이너 스타일 */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #4682b4; /* 전체 배경색을 #4682b4로 설정 */
+}
+
+.login-box {
+  background-color: #3b6d93; /* 박스 배경색을 #4682b4보다 조금 어둡게 설정 */
+  padding: 20px 40px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* 적당한 그림자 */
+}
+
+.login-title {
+  color: #ffffff;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-label {
+  display: block;
+  color: #ffffff; /* 흰색 텍스트 */
+  margin-bottom: 5px;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  padding-right: 8px; /* 오른쪽 패딩을 줄여서 비대칭을 해결 */
+  border: none;
+  border-radius: 4px;
+  background-color: #5a9bd4; /* 입력 필드의 배경색을 밝은 블루로 설정 */
+  color: #ffffff;
+  box-sizing: border-box; /* padding이 width에 포함되도록 설정 */
+}
+
+
+.input-field::placeholder {
+  color: #e0e0e0; /* 플레이스홀더를 밝은 회색으로 설정 */
+}
+
+.error-text {
+  color: #ffcccb; /* 오류 메시지를 연한 빨간색으로 설정 */
+  font-size: 0.9em;
+  margin-top: 5px;
+  display: block;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.checkbox-label {
+  color: #ffffff; /* 체크박스 라벨 색상 */
+  margin-left: 5px;
+}
+
+.login-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #ffffff; /* 버튼 배경을 흰색으로 설정 */
+  color: #4682b4; /* 텍스트 색상을 #4682b4로 설정 */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+  margin-bottom: 10px;
+  font-family: 'ChosunGs';
+}
+
+.login-button:hover {
+  background-color: #e0e0e0; /* 버튼 호버 시 배경색을 밝은 회색으로 설정 */
+}
+
+.terms-text {
+  color: #ffffff;
+  font-size: 0.9em;
+  text-align: center;
+}
+
+.signup-link {
+  color: #008afc; /* 링크 색상을 흰색으로 설정 */
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  text-decoration: none;
+}
+
+.signup-link:hover {
+  text-decoration: underline;
+}
+
+
+.password-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #666; /* 아이콘 색상 */
+  font-size: 16px;
+}
+.login-container {
+  position: relative;
+  padding: 20px;
+}
+
+.login-header {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.header-icon {
+  font-size: 24px;
+  cursor: pointer;
+  color: #ffffff; /* 아이콘 색상 */
+}
+
+.login-box {
+  margin-top: 60px; /* 아이콘과의 공간 확보 */
+}
+
+
+
+/* sign up css */
+/* Sign-up 페이지 스타일 */
+/* Sign-up 페이지 스타일 */
+.signup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #4682b4; /* 전체 배경색을 로그인 페이지와 동일하게 설정 */
+}
+
+.signup-box {
+  background-color: #3b6d93; /* 박스 배경색을 로그인 페이지와 동일하게 설정 */
+  padding: 20px 40px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* 동일한 그림자 설정 */
+}
+
+.signup-title {
+  color: #ffffff;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-label {
+  display: block;
+  color: #ffffff; /* 흰색 텍스트 */
+  margin-bottom: 5px;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  padding-right: 8px;
+  border: none;
+  border-radius: 4px;
+  background-color: #5a9bd4; /* 입력 필드의 배경색을 로그인 페이지와 동일하게 설정 */
+  color: #ffffff;
+  box-sizing: border-box;
+}
+
+.input-field::placeholder {
+  color: #e0e0e0; /* 플레이스홀더 색상을 로그인 페이지와 동일하게 설정 */
+}
+
+.error-text {
+  color: #ffcccb; /* 오류 메시지를 연한 빨간색으로 설정 */
+  font-size: 0.9em;
+  margin-top: 5px;
+  display: block;
+}
+
+.signup-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #ffffff; /* 버튼 배경을 흰색으로 설정 */
+  color: #4682b4; /* 텍스트 색상을 로그인 페이지와 동일하게 설정 */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+  margin-bottom: 10px;
+  font-family: 'ChosunGs'; /* 로그인 페이지와 동일한 폰트 적용 */
+}
+
+.signup-button:hover {
+  background-color: #e0e0e0; /* 버튼 호버 시 배경색을 로그인 페이지와 동일하게 설정 */
+}
+
+.terms-text {
+  color: #ffffff;
+  font-size: 0.9em;
+  text-align: center;
+}
+
+.login-link {
+  color: #008afc; /* 로그인 링크 색상을 파란색으로 설정 */
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  text-decoration: none;
+}
+
+.login-link:hover {
+  text-decoration: underline;
+}
+
+.input-container {
+  position: relative;
+}
+
+.input-field.with-icon {
+  padding-right: 35px; /* 아이콘 공간 확보를 위해 오른쪽 패딩 추가 */
+}
+
+.password-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #ffffff;
+}
+
+.password-icon:hover {
+  color: #e0e0e0;
+}
+
+.signup-container {
+  position: relative;
+  padding: 20px;
+}
+
+.signup-header {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.header-icon {
+  font-size: 24px;
+  cursor: pointer;
+  color: #ffffff; /* 아이콘 색상 */
+}
+
+.signup-box {
+  margin-top: 60px; /* 아이콘과의 공간 확보 */
+}
