@@ -164,7 +164,7 @@ body {
   div {
     font-family: 'ChosunGs';
   }
-/* 기본 컨테이너 스타일 */
+/* 기본 컨테이너 스타일 login */
 .login-container {
   display: flex;
   justify-content: center;
@@ -295,6 +295,8 @@ body {
 .login-box {
   margin-top: 60px; /* 아이콘과의 공간 확보 */
 }
+
+
 
 
 
@@ -430,3 +432,23 @@ body {
 .signup-box {
   margin-top: 60px; /* 아이콘과의 공간 확보 */
 }
+
+.loading-spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  width: 50px;
+  height: 50px;
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #4682b4;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
