@@ -45,6 +45,7 @@ function Signup() {
             axios.post(`https://hoyun-church-backend.vercel.app/signup`, values)
                 .then(res => {
                     navigate('/login');
+                    console.log(res)
                 })
                 .catch(err => console.log(err))
                 .finally(() => setIsLoading(false)); // 요청이 끝나면 로딩 상태 해제
@@ -82,7 +83,7 @@ function Signup() {
                                     placeholder="Enter Name" 
                                     name="name" 
                                     className="input-field" 
-                                    onChange={handleInput} 
+                                    onChange={e => setValues({...values, name: e.target.value})} 
                                 />
                                 {errors.name && <span className="error-text">{errors.name}</span>}
                             </div>
@@ -93,7 +94,7 @@ function Signup() {
                                     placeholder="Enter Email" 
                                     name="email" 
                                     className="input-field" 
-                                    onChange={handleInput} 
+                                    onChange={e => setValues({...values, email: e.target.value})} 
                                 />
                                 {errors.email && <span className="error-text">{errors.email}</span>}
                             </div>
@@ -105,7 +106,7 @@ function Signup() {
                                         placeholder="Enter Password" 
                                         name="password" 
                                         className="input-field with-icon" 
-                                        onChange={handleInput} 
+                                        onChange={e => setValues({...values, password: e.target.value})} 
                                     />
                                     <i 
                                         className={`fa-solid ${showPassword ? "fa-eye-slash" : "fa-eye"} password-icon`} 

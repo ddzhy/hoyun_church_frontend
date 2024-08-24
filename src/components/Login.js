@@ -15,6 +15,7 @@ function Login() {
     const navigate = useNavigate();
     const [errors, setErrors] = useState({});
     const { login } = useAuth();
+    
 
     const handleInput = (event) => {
         setValues(prev => ({ ...prev, [event.target.name]: event.target.value }));
@@ -23,6 +24,8 @@ function Login() {
     const togglePasswordVisibility = () => {
         setShowPassword(!showPassword);
     };
+
+    axios.defaults.withCredentials = true;
 
     const handleSubmit = (event) => {
         event.preventDefault();

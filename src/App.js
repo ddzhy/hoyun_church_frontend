@@ -15,7 +15,7 @@ function App() {
       <Route path="/file-download" element={<Filedownload />} />
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<Signup />} />
-      <Route path="/MyPage" element={<Mypage />} />
+      <Route path="/mypage" element={<Mypage />} />
     </Routes>
   );
 }
