@@ -42,7 +42,7 @@ function Signup() {
             }
         } else {
             setIsLoading(true); // 회원가입 요청 시작 시 로딩 상태로 전환
-            axios.post(`https://hoyun-church-backend.vercel.app/signup`, values)
+            axios.post(`https://hoyun-church-backend.vercel.app/signup`, values, { withCredentials: true })
                 .then(res => {
                     navigate('/login');
                     console.log(res)
