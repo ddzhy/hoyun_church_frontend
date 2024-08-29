@@ -9,7 +9,7 @@ function Login() {
     const [values, setValues] = useState({
         email: '',
         password: ''
-    });
+    })
     const [showPassword, setShowPassword] = useState(false);
     const [isLoading, setIsLoading] = useState(false); // 로딩 상태 추가
     const navigate = useNavigate();
