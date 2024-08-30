@@ -31,7 +31,7 @@ function Login() {
         event.preventDefault();
         const validationErrors = Validation(values);
         setErrors(validationErrors);
-
+    
         if (!validationErrors.email && !validationErrors.password) {
             setIsLoading(true); // 로그인 요청 시작 시 로딩 상태로 전환
             axios.post(`https://hoyun-church-backend.vercel.app/login`, values)
@@ -39,14 +39,20 @@ function Login() {
                     if (res.data === "Success") {
                         login(); 
                         navigate('/'); // 로그인 성공 시 홈으로 이동
+                    } else if (res.data === "Fail") {
+                        alert("이메일 또는 비밀번호가 잘못되었습니다."); // 적절한 오류 메시지
                     } else {
-                        alert("No record found");
+                        alert("서버 오류가 발생했습니다. 다시 시도해주세요.");
                     }
                 })
-                .catch(err => console.log(err))
+                .catch(err => {
+                    console.error("Axios Error:", err);  // 디버깅: Axios 오류 로그
+                    alert("네트워크 오류가 발생했습니다. 다시 시도해주세요.");
+                })
                 .finally(() => setIsLoading(false)); // 요청이 끝나면 로딩 상태 해제
         }
     };
+    
 
     const navigateToHome = () => {
         navigate('/');
