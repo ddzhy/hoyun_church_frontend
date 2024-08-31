@@ -3,7 +3,7 @@ import axios from 'axios';
 
 const Mypage = () => {
   const [userData, setUserData] = useState(null);
-  const [error, setError] = useState(null);
+  const [error, setError] = useState(null)
 
   useEffect(() => {
     // 서버로부터 사용자 데이터를 가져오는 함수

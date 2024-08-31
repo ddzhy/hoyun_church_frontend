@@ -22,7 +22,7 @@ function Login() {
     };
 
     const togglePasswordVisibility = () => {
-        setShowPassword(!showPassword);
+        setShowPassword(!showPassword)
     };
 
     axios.defaults.withCredentials = true;

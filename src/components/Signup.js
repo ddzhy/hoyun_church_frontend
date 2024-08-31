@@ -49,7 +49,7 @@ function Signup() {
                 })
                 .catch(err => console.log(err))
                 .finally(() => setIsLoading(false)); // 요청이 끝나면 로딩 상태 해제
-        }
+        };
     };
 
     const handleResetErrors = () => {
